@@ -10,6 +10,11 @@
     "default_icon": "icon.png"
   },
 
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+  },
+
 "content_scripts": [
     {
       "matches": [
@@ -19,4 +24,6 @@
       "js": ["search_words.js","script.js"]
     }
   ]
+
+  
 }
