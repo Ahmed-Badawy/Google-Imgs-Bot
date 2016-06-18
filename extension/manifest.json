@@ -1,0 +1,22 @@
+{
+"name":"Google Images Bot",
+"description":"",
+
+"version":"1",
+"manifest_version":2,
+"icons": { "16": "icon.png" },
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+
+"content_scripts": [
+    {
+      "matches": [
+          "https://www.google.com.eg/*",
+          "https://www.google.com/*"
+      ],
+      "js": ["search_words.js","script.js"]
+    }
+  ]
+}
