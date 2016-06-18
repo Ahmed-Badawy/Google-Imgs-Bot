@@ -1,4 +1,4 @@
-# Google-Images-Bot
+# ![Project-icon](extension/icon.png) Google-Images-Bot
 It's very simple. provide us with a list of names. we give you a list of images. (first image from google's image search) <br>
 ```
 1- provide the app with a list of names. (using the search_words.js file) 
