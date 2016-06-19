@@ -17,7 +17,7 @@ var search_words = [
 ];
 
 
-var imgs_for_each_element = 5;
+var imgs_for_each_element = 1;
 
 
 
