@@ -1,3 +1,4 @@
+
 function getParameterByName(name) {
   name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
   var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -6,28 +7,35 @@ function getParameterByName(name) {
 }
 
 
+
 if(getParameterByName('active')){
 
   var bot_page_number = parseInt(getParameterByName('bot_page_number') || -1);
   var search_word = search_words[bot_page_number];
 
   function download_img(search_word){
+    if(search_word==undefined) return;
+
     elm = document.getElementById('rg');
-    img = elm.getElementsByTagName('img');
-    first_img = img[0].getAttribute('src');
-    // console.log(first_img);
+    imgs = elm.getElementsByTagName('img');
+    console.log(imgs);
 
-    first_img = first_img.replace(/^data:image\/[^;]/, 'data:application/octet-stream');
-    // console.log(first_img);
+    for(i=0;i<imgs_for_each_element;i++){
+      // console.log(i,imgs_for_each_element);
+      img_data = imgs[i].getAttribute('src');
+      img_data = img_data.replace(/^data:image\/[^;]/, 'data:application/octet-stream');
 
-    blob = new Blob([first_img], {type: 'text/jpg'});
-    e = document.createEvent('MouseEvents');
-    a = document.createElement('a');
-    a.download = `${search_word}.jpg`
-    // a.href = window.URL.createObjectURL(blob)
-    a.href = first_img
-    e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null)
-    a.dispatchEvent(e)
+      blob = new Blob([img_data], {type: 'text/jpg'});
+      e = document.createEvent('MouseEvents');
+      a = document.createElement('a');
+      a.download = `${search_word}.jpg`
+      // a.href = window.URL.createObjectURL(blob)
+      a.href = img_data
+      e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null)
+      e.preventDefault();
+      a.dispatchEvent(e)
+    }
+
   }
 
   download_img(search_word);

@@ -1,4 +1,3 @@
-
 var search_words = [
 	'justin bieber',
 	'britney spears',
@@ -16,4 +15,10 @@ var search_words = [
 	'Adele',
 	'Lil Wayne'
 ];
+
+
+var imgs_for_each_element = 5;
+
+
+
 
