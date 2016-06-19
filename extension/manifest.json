@@ -4,14 +4,14 @@
 
 "version":"1",
 "manifest_version":2,
-"icons": { "16": "icon.png" },
+"icons": { "16": "content/icon.png" },
 
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "content/icon.png"
   },
 
   "background": {
-      "scripts": ["background.js"],
+      "scripts": ["content/background.js"],
       "persistent": false
   },
 
@@ -19,9 +19,12 @@
     {
       "matches": [
           "https://www.google.com.eg/*",
+          "https://www.google.com.de/*",
+          "https://www.google.com.ca/*",
+          "https://www.google.com.us/*",
           "https://www.google.com/*"
       ],
-      "js": ["config.js","script.js"]
+      "js": ["settings.js","content/script.js"]
     }
   ]
 
