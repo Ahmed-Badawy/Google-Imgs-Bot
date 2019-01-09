@@ -1,7 +1,8 @@
 # ![Project-icon](extension/content/icon.png) Google-Images-Bot
 It's very simple. provide us with a list of names. we give you a list of images. (first image from google's image search) <br>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hS9JdTTS_0w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Explanation Video](https://www.youtube.com/embed/hS9JdTTS_0w)
+
 
 
 ```
